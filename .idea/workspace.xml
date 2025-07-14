@@ -35,6 +35,11 @@
       <change afterPath="$PROJECT_DIR$/../S04T02N01/src/main/java/cat/itacademy/s04/t02/n01/services/FruitService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../S04T02N01/src/main/resources/application-mysql.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../S04T02N01/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/GameControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/PlayerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/services/GameServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/services/PlayerServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tarea S3.02.Patterns.2/src/level1/builder/PizzaBuilder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tarea S3.02.Patterns.2/src/level1/concreteBuilder/HawaiianPizza.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tarea S3.02.Patterns.2/src/level1/concreteBuilder/PepperoniPizza.java" afterDir="false" />
@@ -85,6 +90,19 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Plane.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/S05T01N01Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/S05T01N01Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/S05T01N01ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
@@ -124,6 +142,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -134,33 +156,105 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.PlayerControllerTest.executor": "Run",
+    "JUnit.PlayerControllerTest.testDeletePlayerById.executor": "Run",
+    "JUnit.PlayerServiceTest.executor": "Run",
+    "JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DemoApplication.executor": "Run",
+    "Spring Boot.S05T01N01Application.executor": "Run",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/main/resources",
+    "last_opened_file_path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/test/java/com/example",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/example" />
+      <recent name="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cat.itacademy.s05.t01.n01.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PlayerControllerTest.testDeletePlayerById">
+    <configuration name="PlayerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="S05T01N01" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.PlayerControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerControllerTest.testDeletePlayerById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="S05T01N01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.PlayerControllerTest" />
+      <option name="METHOD_NAME" value="testDeletePlayerById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="S05T01N01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.services" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.services.PlayerServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerServiceTest.testUpdatePlayerById_whenPlayerExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="S05T01N01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.services" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.services.PlayerServiceTest" />
+      <option name="METHOD_NAME" value="testUpdatePlayerById_whenPlayerExists" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,6 +266,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PlayerControllerTest.testDeletePlayerById" />
+        <item itemvalue="JUnit.PlayerControllerTest" />
+        <item itemvalue="JUnit.PlayerServiceTest" />
+        <item itemvalue="JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -190,7 +292,8 @@
       <option name="presentableId" value="Default" />
       <updated>1752059002650</updated>
       <workItem from="1752059005443" duration="1308000" />
-      <workItem from="1752060785887" duration="15193000" />
+      <workItem from="1752060785887" duration="25827000" />
+      <workItem from="1752493742622" duration="7890000" />
     </task>
     <servers />
   </component>
@@ -207,5 +310,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

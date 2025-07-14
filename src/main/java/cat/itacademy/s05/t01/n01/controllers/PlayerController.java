@@ -1,6 +1,7 @@
 package cat.itacademy.s05.t01.n01.controllers;
 
 import cat.itacademy.s05.t01.n01.model.Player;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,9 +10,10 @@ import reactor.core.publisher.Mono;
 import cat.itacademy.s05.t01.n01.services.PlayerService;
 
 @RestController
-@RequestMapping("/players")
+@RequestMapping("/player")
 public class PlayerController {
 
+    @Autowired
     private final PlayerService playerService;
 
     public PlayerController(PlayerService playerService) {
@@ -39,8 +41,9 @@ public class PlayerController {
     @DeleteMapping("/{id}")
     public Mono<ResponseEntity<Void>> deletePlayerById(@PathVariable int id) {
         return playerService.deletePlayerById(id)
-                .map(unused -> new ResponseEntity<>(HttpStatus.NO_CONTENT));
+                .then(Mono.just(new ResponseEntity<>(HttpStatus.NO_CONTENT)));
     }
+
     @PutMapping("/{id}")
     public Mono<ResponseEntity<Player>> updatePlayerById(@PathVariable int id, @RequestBody Player player) {
         return playerService.getPlayerById(id)

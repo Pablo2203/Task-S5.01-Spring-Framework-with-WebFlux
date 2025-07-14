@@ -11,6 +11,15 @@ public class S05T01N01Application {
 	}
 
 }
+
+/*POST http://localhost:8081/game/new
+GET http://localhost:8081/game/{id}
+POST http://localhost:8081/game/{id}/play
+DELETE http://localhost:8081/game/{id}/delete
+GET http://localhost:8081/ranking
+PUT http://localhost:8081/player/{playerId}*/
+
+
 /*
 Endpoints para el juego:
 Crear partida:
