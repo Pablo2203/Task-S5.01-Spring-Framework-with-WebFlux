@@ -17,6 +17,8 @@ public class Player {
     @Id
     private int id;
     private String name;
+    private int totalScore;
+
 
 
 }

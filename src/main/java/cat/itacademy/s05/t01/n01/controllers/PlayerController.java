@@ -38,6 +38,7 @@ public class PlayerController {
         return playerService.getAllPlayers();
     }
 
+
     @DeleteMapping("/{id}")
     public Mono<ResponseEntity<Void>> deletePlayerById(@PathVariable int id) {
         return playerService.deletePlayerById(id)
@@ -53,7 +54,6 @@ public class PlayerController {
                 })
                 .map(updatedPlayer -> new ResponseEntity<>(updatedPlayer, HttpStatus.OK));
     }
-
 }
 /*Cambiar nombre del jugador:
 

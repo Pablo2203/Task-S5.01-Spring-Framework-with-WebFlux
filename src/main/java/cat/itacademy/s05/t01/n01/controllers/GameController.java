@@ -24,6 +24,14 @@ public class GameController {
                 .map(savedGame -> new ResponseEntity<>(savedGame, HttpStatus.CREATED));
     }
 
+    @PostMapping("/{id}/play")
+    public Mono<ResponseEntity<Game>> playGame(@PathVariable String id, @RequestParam String action) {
+        return gameService.playGame(id, action)
+                .map(updatedGame -> new ResponseEntity<>(updatedGame, HttpStatus.OK))
+                .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+
     @GetMapping("/player/{playerId}")
     public Flux<Game> getGamesByPlayerId(@PathVariable String playerId) {
         return gameService.getGamesByPlayerId(playerId);
@@ -42,4 +50,12 @@ public class GameController {
                 .map(updatedGame -> new ResponseEntity<>(updatedGame, HttpStatus.OK))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
+    @DeleteMapping("/{id}/delete")
+    public Mono<ResponseEntity<Void>> deleteGame(@PathVariable String id) {
+        return gameService.getGameById(id) // Intentamos obtener el juego.
+                .flatMap(game -> gameService.deleteGame(id) // Si existe, lo eliminamos.
+                        .then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT))))
+                .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND)); // Si no existe, devolvemos 404.
+    }
+
 }
