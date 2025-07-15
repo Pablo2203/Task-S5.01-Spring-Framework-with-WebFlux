@@ -15,9 +15,12 @@ import java.util.Comparator;
 @Service
 public class PlayerService {
     private final PlayerRepository playerRepository;
+    private final GameRepository gameRepository;
 
-    public PlayerService(PlayerRepository playerRepository) {
+    public PlayerService(PlayerRepository playerRepository, GameRepository gameRepository) {
         this.playerRepository = playerRepository;
+        this.gameRepository = gameRepository;
+
     }
 
         public Mono<Player> createPlayer(Player player) {
@@ -43,5 +46,37 @@ public class PlayerService {
                         return playerRepository.save(currentPlayer);
                     });
         }
-
+    public Flux<Player> getRanking() {
+        return playerRepository.findAll()
+                .flatMap(player ->
+                        gameRepository.findByPlayerIdAndFinishedAndCurrentScore(
+                                        String.valueOf(player.getId()),
+                                        true,
+                                        21
+                                ) // Obtener solo partidas ganadas
+                                .count() // Contar el número de partidas ganadas directamente en la operación reactiva
+                                .map(totalWins -> {
+                                    player.setTotalScore(totalWins); // Actualizar totalScore del jugador
+                                    return player;
+                                })
+                )
+                .sort(Comparator.comparingLong(Player::getTotalScore).reversed()); // Ordenar por totalScore
+    }
+   /* public Flux<Player> getRanking() {
+        return playerRepository.findAll()
+                .flatMap(player -> {
+                    return gameRepository.findByPlayerId(String.valueOf(player.getId()))
+                            .filter(Game::isFinished)
+                            .collectList()
+                            .map(games -> {
+                                long wins = games.stream().filter(game -> game.getCurrentScore() == 21).count();
+                                player.setTotalScore(wins); // Añade un campo score al modelo Player si no está
+                                return player;
+                            });
+                })
+                .sort(Comparator.comparingLong(Player::getTotalScore).reversed()); // Ordenar por puntaje
+    }*/
 }
+/*
+
+*/

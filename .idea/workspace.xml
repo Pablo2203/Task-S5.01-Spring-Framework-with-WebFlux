@@ -86,11 +86,9 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/PlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/services/GameService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/services/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/services/PlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
@@ -282,7 +280,7 @@
       <updated>1752059002650</updated>
       <workItem from="1752059005443" duration="1308000" />
       <workItem from="1752060785887" duration="25827000" />
-      <workItem from="1752493742622" duration="12415000" />
+      <workItem from="1752493742622" duration="15344000" />
     </task>
     <servers />
   </component>

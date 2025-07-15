@@ -7,5 +7,7 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface GameRepository extends ReactiveMongoRepository<Game, String> {
     Flux<Game> findByPlayerId(String playerId);
+
+    Flux<Game> findByPlayerIdAndFinishedAndCurrentScore(String playerId, boolean finished, long currentScore);
 }
 

@@ -54,6 +54,10 @@ public class PlayerController {
                 })
                 .map(updatedPlayer -> new ResponseEntity<>(updatedPlayer, HttpStatus.OK));
     }
+    @GetMapping("/ranking")
+    public Flux<Player> getRanking() {
+        return playerService.getRanking();
+    }
 }
 /*Cambiar nombre del jugador:
 

@@ -18,7 +18,7 @@ public class Game {
     @Id
     private String id;
     private String playerId;
-    private int currentScore;
+    private long currentScore;
     private List<String> cards;
     private boolean finished;
 
