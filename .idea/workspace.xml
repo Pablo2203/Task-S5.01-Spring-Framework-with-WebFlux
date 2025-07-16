@@ -86,10 +86,14 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/S05T01N01Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/S05T01N01Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/controllers/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/services/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/services/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/PlayerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/PlayerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/services/PlayerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/services/PlayerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
@@ -143,6 +147,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.GameControllerTest.executor": "Run",
+    "JUnit.GameControllerTest.testCreateGame.executor": "Run",
     "JUnit.PlayerControllerTest.executor": "Run",
     "JUnit.PlayerControllerTest.testDeletePlayerById.executor": "Run",
     "JUnit.PlayerServiceTest.executor": "Run",
@@ -154,7 +160,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DemoApplication.executor": "Run",
     "Spring Boot.S05T01N01Application.executor": "Run",
-    "git-widget-placeholder": "game__improvement",
+    "git-widget-placeholder": "feat/swagger",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/test/java/com/example",
     "node.js.detected.package.eslint": "true",
@@ -183,7 +189,38 @@
       <recent name="cat.itacademy.s05.t01.n01.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlayerControllerTest.testDeletePlayerById">
+  <component name="RunManager" selected="JUnit.GameControllerTest.testCreateGame">
+    <configuration name="GameControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="S05T01N01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.GameControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameControllerTest.testCreateGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="S05T01N01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.GameControllerTest" />
+      <option name="METHOD_NAME" value="testCreateGame" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlayerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="S05T01N01" />
       <extension name="coverage">
@@ -230,22 +267,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerServiceTest.testUpdatePlayerById_whenPlayerExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="S05T01N01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.services" />
-      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.services.PlayerServiceTest" />
-      <option name="METHOD_NAME" value="testUpdatePlayerById_whenPlayerExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="S05T01N01Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="S05T01N01" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cat.itacademy.s05.t01.n01.S05T01N01Application" />
@@ -255,10 +276,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameControllerTest.testCreateGame" />
+        <item itemvalue="JUnit.GameControllerTest" />
         <item itemvalue="JUnit.PlayerControllerTest.testDeletePlayerById" />
         <item itemvalue="JUnit.PlayerControllerTest" />
         <item itemvalue="JUnit.PlayerServiceTest" />
-        <item itemvalue="JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +302,7 @@
       <updated>1752059002650</updated>
       <workItem from="1752059005443" duration="1308000" />
       <workItem from="1752060785887" duration="25827000" />
-      <workItem from="1752493742622" duration="15344000" />
+      <workItem from="1752493742622" duration="27840000" />
     </task>
     <servers />
   </component>

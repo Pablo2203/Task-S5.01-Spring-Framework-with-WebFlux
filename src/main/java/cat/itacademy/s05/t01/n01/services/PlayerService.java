@@ -46,7 +46,7 @@ public class PlayerService {
                         return playerRepository.save(currentPlayer);
                     });
         }
-    public Flux<Player> getRanking() {
+        public Flux<Player> getRanking() {
         return playerRepository.findAll()
                 .flatMap(player ->
                         gameRepository.findByPlayerIdAndFinishedAndCurrentScore(
