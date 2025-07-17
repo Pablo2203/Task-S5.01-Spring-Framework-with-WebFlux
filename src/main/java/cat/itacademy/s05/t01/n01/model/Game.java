@@ -18,8 +18,8 @@ public class Game {
     @Id
     private String id;
     private String playerId;
-    private List<String> cards;
-    private int currentScore;
+    private long currentScore;
+    private List<String> cards = List.of();
     private boolean finished;
 
 }

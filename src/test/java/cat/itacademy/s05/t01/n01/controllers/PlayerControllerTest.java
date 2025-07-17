@@ -2,26 +2,22 @@ package cat.itacademy.s05.t01.n01.controllers;
 
 import cat.itacademy.s05.t01.n01.model.Player;
 import cat.itacademy.s05.t01.n01.services.PlayerService;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 @ActiveProfiles("test")
 @WebFluxTest(controllers = PlayerController.class)
-class PlayerControllerTest {
+public class PlayerControllerTest {
 
     @Autowired
     private WebTestClient webTestClient;
@@ -29,115 +25,174 @@ class PlayerControllerTest {
     @MockBean
     private PlayerService playerService;
 
+    private static Player player;
 
-    private Player player;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
+    @BeforeAll
+    static void setup() {
         player = new Player();
         player.setId(1);
-        player.setName("Test Player");
+        player.setName("John Doe");
+        player.setTotalScore(10); // Total de partidas ganadas o puntaje del jugador.
     }
 
     @Test
     void testCreatePlayer() {
-        Mockito.when(playerService.createPlayer(any(Player.class)))
+        Mockito.when(playerService.createPlayer(Mockito.any(Player.class)))
                 .thenReturn(Mono.just(player));
 
         webTestClient.post()
-                .uri("/players")
-                .contentType(MediaType.APPLICATION_JSON)
-                .bodyValue(player)
+                .uri("/player")
+                .body(Mono.just(player), Player.class)
                 .exchange()
                 .expectStatus().isCreated()
                 .expectBody(Player.class)
                 .value(response -> {
-                    assert response.getId() == player.getId();
-                    assert response.getName().equals(player.getName());
+                    assertNotNull(response);
+                    assertEquals(player.getId(), response.getId());
+                    assertEquals(player.getName(), response.getName());
                 });
     }
 
     @Test
-    void testGetPlayerByIdSuccess() {
-        Mockito.when(playerService.getPlayerById(eq(1)))
+    void testGetPlayerById() {
+        Mockito.when(playerService.getPlayerById(player.getId()))
                 .thenReturn(Mono.just(player));
 
         webTestClient.get()
-                .uri("/players/1")
+                .uri("/player/{id}", player.getId())
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(Player.class)
                 .value(response -> {
-                    assert response.getId() == player.getId();
-                    assert response.getName().equals(player.getName());
+                    assertNotNull(response);
+                    assertEquals(player.getId(), response.getId());
+                    assertEquals(player.getName(), response.getName());
                 });
     }
 
     @Test
     void testGetPlayerByIdNotFound() {
-        Mockito.when(playerService.getPlayerById(eq(1)))
+        int playerId = 999; // Un id inexistente.
+
+        Mockito.when(playerService.getPlayerById(playerId))
                 .thenReturn(Mono.empty());
 
         webTestClient.get()
-                .uri("/players/1")
+                .uri("/player/{id}", playerId)
                 .exchange()
                 .expectStatus().isNotFound();
     }
 
     @Test
     void testGetAllPlayers() {
-        Player player2 = new Player();
-        player2.setId(2);
-        player2.setName("Second Player");
-
         Mockito.when(playerService.getAllPlayers())
-                .thenReturn(Flux.just(player, player2));
+                .thenReturn(Flux.just(player, new Player(2, "Jane Doe", 5)));
 
         webTestClient.get()
-                .uri("/players")
+                .uri("/player")
                 .exchange()
                 .expectStatus().isOk()
                 .expectBodyList(Player.class)
-                .value(players -> {
-                    assert players.size() == 2;
-                    assert players.get(0).getId() == player.getId();
-                    assert players.get(1).getId() == player2.getId();
+                .value(response -> {
+                    assertNotNull(response);
+                    assertEquals(2, response.size());
+                    assertEquals(player.getId(), response.get(0).getId());
+                    assertEquals("Jane Doe", response.get(1).getName());
                 });
     }
 
     @Test
     void testDeletePlayerById() {
-        Mockito.when(playerService.deletePlayerById(eq(1)))
+        Mockito.when(playerService.deletePlayerById(player.getId()))
                 .thenReturn(Mono.empty());
 
         webTestClient.delete()
-                .uri("/players/1")
+                .uri("/player/{id}", player.getId())
                 .exchange()
                 .expectStatus().isNoContent();
     }
 
     @Test
-    void testUpdatePlayerById() {
-        Player updatedPlayer = new Player();
-        updatedPlayer.setId(1);
-        updatedPlayer.setName("Updated Player");
+    void testDeletePlayerByIdNotFound() {
+        int playerId = 999; // Un id inexistente.
 
-        Mockito.when(playerService.getPlayerById(eq(1)))
-                .thenReturn(Mono.just(player));
-        Mockito.when(playerService.createPlayer(any(Player.class)))
-                .thenReturn(Mono.just(updatedPlayer));
+        Mockito.when(playerService.deletePlayerById(playerId))
+                .thenReturn(Mono.error(new RuntimeException("Player not found")));
+
+        webTestClient.delete()
+                .uri("/player/{id}", playerId)
+                .exchange()
+                .expectStatus().is5xxServerError(); // Si deseas capturar errores, puedes mejorar esto para un 404.
+    }
+
+    @Test
+    void testUpdatePlayerById() {
+        player.setId(1);
+        player.setName("Original Name");
+        player.setTotalScore(100);
+
+        // Crear el jugador actualizado
+        Player updatedPlayer = new Player();
+        updatedPlayer.setId(player.getId());
+        updatedPlayer.setName("Updated Name");
+        updatedPlayer.setTotalScore(player.getTotalScore());
+
+        // Mockear el servicio para que devuelva el jugador existente
+        Mockito.when(playerService.getPlayerById(1))
+                .thenReturn(Mono.just(player)); // Devuelve el jugador inicial cuando se consulta por ID
+
+        // Mockear el servicio para que devuelva el jugador actualizado
+        Mockito.when(playerService.updatePlayerById(Mockito.eq(1), Mockito.any(Player.class)))
+                .thenReturn(Mono.just(updatedPlayer)); // Devuelve el jugador actualizado
+
+        // Ejecuta el test
+        webTestClient.put()
+                .uri("/player/{id}", 1)
+                .body(Mono.just(updatedPlayer), Player.class) // Cuerpo con los datos del jugador actualizado
+                .exchange()
+                .expectStatus().isOk() // Verifica que la respuesta es 200 OK
+                .expectBody(Player.class) // Verifica el cuerpo de respuesta
+                .value(response -> {
+                    assertEquals(updatedPlayer.getId(), response.getId());
+                    assertEquals("Updated Name", response.getName());
+                });
+    }
+
+
+    @Test
+    void testUpdatePlayerByIdNotFound() {
+        int playerId = 999; // Un ID inexistente.
+        Player updatedPlayer = new Player();
+        updatedPlayer.setId(playerId);
+        updatedPlayer.setName("Updated Name");
+
+        Mockito.when(playerService.getPlayerById(playerId)).thenReturn(Mono.empty());
+        Mockito.when(playerService.updatePlayerById(playerId, updatedPlayer)).thenReturn(Mono.empty());
 
         webTestClient.put()
-                .uri("/players/1")
-                .contentType(MediaType.APPLICATION_JSON)
-                .bodyValue(updatedPlayer)
+                .uri("/player/{id}", playerId)
+                .body(Mono.just(updatedPlayer), Player.class)
+                .exchange()
+                .expectStatus().isNotFound(); // Ahora debería responder con 404
+    }
+
+    @Test
+    void testGetRanking() {
+        Player player2 = new Player(2, "Jane Doe", 15);
+
+        Mockito.when(playerService.getRanking())
+                .thenReturn(Flux.just(player2, player));
+
+        webTestClient.get()
+                .uri("/player/ranking")
                 .exchange()
                 .expectStatus().isOk()
-                .expectBody(Player.class)
+                .expectBodyList(Player.class)
                 .value(response -> {
-                    assert response.getId() == updatedPlayer.getId();
-                    assert response.getName().equals("Updated Player");
+                    assertNotNull(response);
+                    assertEquals(2, response.size());
+                    assertEquals("Jane Doe", response.get(0).getName()); // Jane tiene mayor puntuación
+                    assertEquals("John Doe", response.get(1).getName());
                 });
     }
 }
