@@ -33,6 +33,7 @@ public class PlayerControllerTest {
         player.setId(1);
         player.setName("John Doe");
         player.setTotalScore(10); // Total de partidas ganadas o puntaje del jugador.
+
     }
 
     @Test
@@ -178,21 +179,25 @@ public class PlayerControllerTest {
 
     @Test
     void testGetRanking() {
-        Player player2 = new Player(2, "Jane Doe", 15);
+        // Crear jugadores de prueba
+        Player player2 = new Player(2, "Jane Doe", 15); // Mayor puntaje
+        Player player1 = new Player(1, "John Doe", 10); // Menor puntaje
 
+        // Simular el servicio
         Mockito.when(playerService.getRanking())
-                .thenReturn(Flux.just(player2, player));
+                .thenReturn(Flux.just(player2, player1)); // Deben estar en orden descendente
 
+        // Realizar la llamada al endpoint y validar la respuesta
         webTestClient.get()
                 .uri("/player/ranking")
                 .exchange()
                 .expectStatus().isOk()
                 .expectBodyList(Player.class)
                 .value(response -> {
-                    assertNotNull(response);
-                    assertEquals(2, response.size());
-                    assertEquals("Jane Doe", response.get(0).getName()); // Jane tiene mayor puntuación
-                    assertEquals("John Doe", response.get(1).getName());
+                    assertNotNull(response);            // Validar que la respuesta no sea nula
+                    assertEquals(2, response.size());   // Validar que hay 2 jugadores
+                    assertEquals("Jane Doe", response.get(0).getName()); // El primero tiene mayor puntaje
+                    assertEquals("John Doe", response.get(1).getName()); // El segundo tiene menor puntaje
                 });
     }
 }

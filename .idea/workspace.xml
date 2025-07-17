@@ -86,7 +86,8 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/PlayerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cat/itacademy/s05/t01/n01/controllers/PlayerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
@@ -144,42 +145,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.GameControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GameControllerTest.testCreateGame.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GameServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GameServiceTest.playGame_ShouldUpdateGameState_WhenActionIsHit.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PlayerControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PlayerControllerTest.testDeletePlayerById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PlayerControllerTest.testUpdatePlayerById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PlayerControllerTest.testUpdatePlayerByIdNotFound.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.PlayerServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PlayerServiceTest.getRanking_ShouldReturnPlayersSortedByScore.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.S05T01N01Application.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/test/java/com/example&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.GameControllerTest.executor": "Run",
+    "JUnit.GameControllerTest.testCreateGame.executor": "Run",
+    "JUnit.GameServiceTest.executor": "Run",
+    "JUnit.GameServiceTest.playGame_ShouldUpdateGameState_WhenActionIsHit.executor": "Run",
+    "JUnit.PlayerControllerTest.executor": "Run",
+    "JUnit.PlayerControllerTest.testDeletePlayerById.executor": "Run",
+    "JUnit.PlayerControllerTest.testGetRanking.executor": "Run",
+    "JUnit.PlayerControllerTest.testUpdatePlayerById.executor": "Run",
+    "JUnit.PlayerControllerTest.testUpdatePlayerByIdNotFound.executor": "Debug",
+    "JUnit.PlayerServiceTest.executor": "Run",
+    "JUnit.PlayerServiceTest.getRanking_ShouldReturnPlayersSortedByScore.executor": "Run",
+    "JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DemoApplication.executor": "Run",
+    "Spring Boot.S05T01N01Application.executor": "Run",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/test/java/com/example",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -197,7 +199,7 @@
       <recent name="cat.itacademy.s05.t01.n01.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlayerServiceTest.getRanking_ShouldReturnPlayersSortedByScore">
+  <component name="RunManager" selected="JUnit.PlayerControllerTest.testGetRanking">
     <configuration name="GameControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="S05T01N01" />
       <extension name="coverage">
@@ -213,32 +215,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="S05T01N01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.services.*" />
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.services" />
-      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.services.GameServiceTest" />
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.PlayerControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameServiceTest.playGame_ShouldUpdateGameState_WhenActionIsHit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerControllerTest.testGetRanking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="S05T01N01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.services.*" />
+          <option name="PATTERN" value="cat.itacademy.s05.t01.n01.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.services" />
-      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.services.GameServiceTest" />
-      <option name="METHOD_NAME" value="playGame_ShouldUpdateGameState_WhenActionIsHit" />
+      <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
+      <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.PlayerControllerTest" />
+      <option name="METHOD_NAME" value="testGetRanking" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -284,11 +286,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerControllerTest.testGetRanking" />
+        <item itemvalue="JUnit.PlayerControllerTest" />
         <item itemvalue="JUnit.PlayerServiceTest.getRanking_ShouldReturnPlayersSortedByScore" />
         <item itemvalue="JUnit.PlayerServiceTest" />
         <item itemvalue="JUnit.GameControllerTest" />
-        <item itemvalue="JUnit.GameServiceTest.playGame_ShouldUpdateGameState_WhenActionIsHit" />
-        <item itemvalue="JUnit.GameServiceTest" />
       </list>
     </recent_temporary>
   </component>
