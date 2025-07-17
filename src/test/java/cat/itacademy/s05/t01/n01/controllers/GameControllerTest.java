@@ -8,7 +8,6 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Flux;
@@ -36,21 +35,27 @@ public class GameControllerTest {
         game.setId("1");
         game.setPlayerId("player1");
         game.setCurrentScore(0);
-        game.setCards(Arrays.asList("Ace of Spades", "King of Hearts"));
+        game.setCards(Arrays.asList());
         game.setFinished(false);
     }
 
     @Test
     void testCreateGame() {
-        Mockito.when(gameService.createGame(game)).thenReturn(Mono.just(game));
+        Mockito.when(gameService.createGame(Mockito.any(Game.class)))
+                .thenReturn(Mono.just(game));
+
         webTestClient.post()
                 .uri("/game/new")
-                .body(Mono.just(game), Game.class)
+                .body(Mono.just(game), Game.class) // No incluir cartas explícitas
                 .exchange()
                 .expectStatus().isCreated()
                 .expectBody(Game.class)
-                .value(response -> assertEquals(game.getId(), response.getId()));
+                .value(response -> {
+                    assertEquals(game.getId(), response.getId());
+                    assertEquals(0, response.getCards().size()); // Verificar que las cartas están vacías
+                });
     }
+
 
     @Test
     void testPlayGame() {
@@ -82,9 +87,10 @@ public class GameControllerTest {
                     assertNotNull(response);
                     assertEquals(1, response.size());
                     assertEquals(game.getId(), response.get(0).getId());
+                    // Verificar que inicialmente las cartas están vacías
+                    assertEquals(0, response.get(0).getCards().size());
                 });
     }
-
     @Test
     void testGetGameById() {
         String gameId = "1";

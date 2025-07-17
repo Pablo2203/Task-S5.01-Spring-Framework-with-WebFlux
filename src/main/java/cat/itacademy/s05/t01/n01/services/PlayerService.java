@@ -1,11 +1,9 @@
 package cat.itacademy.s05.t01.n01.services;
 
-import cat.itacademy.s05.t01.n01.model.Game;
 import cat.itacademy.s05.t01.n01.model.Player;
 import cat.itacademy.s05.t01.n01.repositories.GameRepository;
 import cat.itacademy.s05.t01.n01.repositories.PlayerRepository;
 import org.springframework.stereotype.Service;
-import cat.itacademy.s05.t01.n01.repositories.GameRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -27,9 +25,10 @@ public class PlayerService {
             return playerRepository.save(player);
         }
 
-        public Mono<Player> getPlayerById(int id) {
-            return playerRepository.findById(id);
-        }
+    public Mono<Player> getPlayerById(int id) {
+        return playerRepository.findById(id)
+                .switchIfEmpty(Mono.empty()); // Nunca devuelve null
+    }
 
         public Flux<Player> getAllPlayers() {
             return playerRepository.findAll();
@@ -39,28 +38,33 @@ public class PlayerService {
         public Mono<Void> deletePlayerById(int id) {
             return playerRepository.deleteById(id);
         }
+
         public Mono<Player> updatePlayerById(int id, Player player) {
-            return playerRepository.findById(id)
-                    .flatMap(currentPlayer -> {
-                        currentPlayer.setName(player.getName());
-                        return playerRepository.save(currentPlayer);
-                    });
-        }
-        public Flux<Player> getRanking() {
+        return playerRepository.findById(id)  // Verifica si el jugador existe
+                .flatMap(existingPlayer -> { // Si el jugador existe, actualiza
+                    existingPlayer.setName(player.getName());
+                    existingPlayer.setTotalScore(player.getTotalScore());
+                    return playerRepository.save(existingPlayer); // Guarda y devuelve
+                });
+    }
+
+    public Flux<Player> getRanking() {
         return playerRepository.findAll()
                 .flatMap(player ->
                         gameRepository.findByPlayerIdAndFinishedAndCurrentScore(
                                         String.valueOf(player.getId()),
                                         true,
                                         21
-                                ) // Obtener solo partidas ganadas
-                                .count() // Contar el número de partidas ganadas directamente en la operación reactiva
+                                )
+                                .count() // Contar el número de partidas ganadas
                                 .map(totalWins -> {
                                     player.setTotalScore(totalWins); // Actualizar totalScore del jugador
                                     return player;
                                 })
                 )
-                .sort(Comparator.comparingLong(Player::getTotalScore).reversed()); // Ordenar por totalScore
+                .doOnNext(player -> System.out.println("Player after score computation: " + player))
+                .sort(Comparator.comparingLong(Player::getTotalScore).reversed()) // Clasificar por totalScore
+                .log("Ranking Flux");
     }
    /* public Flux<Player> getRanking() {
         return playerRepository.findAll()
@@ -77,6 +81,3 @@ public class PlayerService {
                 .sort(Comparator.comparingLong(Player::getTotalScore).reversed()); // Ordenar por puntaje
     }*/
 }
-/*
-
-*/

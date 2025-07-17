@@ -19,7 +19,7 @@ public class Game {
     private String id;
     private String playerId;
     private long currentScore;
-    private List<String> cards;
+    private List<String> cards = List.of();
     private boolean finished;
 
 }

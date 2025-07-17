@@ -1,6 +1,7 @@
 package cat.itacademy.s05.t01.n01.controllers;
 
 import cat.itacademy.s05.t01.n01.model.Player;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class PlayerController {
                     @ApiResponse(responseCode = "201", description = "Player successfully created"),
                     @ApiResponse(responseCode = "400", description = "Invalid request")
             })
-    public Mono<ResponseEntity<Player>> createPlayer(@RequestBody Player player) {
+    public Mono<ResponseEntity<Player>> createPlayer(@Valid @RequestBody Player player) {
         return playerService.createPlayer(player)
                 .map(savedPlayer -> new ResponseEntity<>(savedPlayer, HttpStatus.CREATED));
     }
@@ -82,14 +83,21 @@ public class PlayerController {
                     @ApiResponse(responseCode = "400", description = "Invalid request")
             })
     public Mono<ResponseEntity<Player>> updatePlayerById(@PathVariable int id, @RequestBody Player player) {
-        return playerService.getPlayerById(id)
-                .flatMap(currentPlayer -> {
-                    currentPlayer.setName(player.getName());
-                    return playerService.createPlayer(currentPlayer);
+        return playerService.getPlayerById(id) // Consulta al servicio
+                .flatMap(existingPlayer -> { // Si el jugador existe, actualiza
+                    player.setId(existingPlayer.getId());
+                    return playerService.updatePlayerById(id, player);
                 })
-                .map(updatedPlayer -> new ResponseEntity<>(updatedPlayer, HttpStatus.OK))
-                .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                .map(updatedPlayer -> ResponseEntity.ok(updatedPlayer)) // Devuelve 200 OK si se actualizó
+                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build())) // Devuelve 404 si no existe
+                .onErrorResume(e -> { // Manejo genérico de errores
+                    e.printStackTrace();
+                    return Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build());
+                });
     }
+
+
+
 
     @GetMapping("/ranking")
     @Operation(summary = "Get player rankings",
