@@ -17,7 +17,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<MYSQL_ADDON_HOST>baxpj38ygnhjn29xafol-mysql.services.clever-cloud.com</MYSQL_ADDON_HOST>
-		<MYSQL_ADDON_PORT>3306</MYSQL_ADDON_PORT>
+		<MYSQL_ADDON_PORT>3307</MYSQL_ADDON_PORT>
 		<MYSQL_ADDON_DB>baxpj38ygnhjn29xafol</MYSQL_ADDON_DB>
 		<MYSQL_ADDON_USER>uanrnnjmx5z4brrl</MYSQL_ADDON_USER>
 		<MYSQL_ADDON_PASSWORD>4yPQ4ThqcOEPAQhQCaUw</MYSQL_ADDON_PASSWORD>
