@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: src/main/java
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_ADDON_HOST=baxpj38ygnhjn29xafol-mysql.services.clever-cloud.com
+      - MYSQL_ADDON_DB=baxpj38ygnhjn29xafol
+      - MYSQL_ADDON_USER=uanrnnjmx5z4brrl
+      - MYSQL_ADDON_PORT=3306
+      - MYSQL_ADDON_PASSWORD=4yPQ4ThqcOEPAQhQCaUw
+    ports:
+      - "8081:8081" # Mapea el puerto local 8081 al puerto 8081 del contenedor
+    restart: always # Reinicia automáticamente si falla
+    depends_on: [] # Aquí puedes agregar dependencias si añades otros servicios
+    networks:
+      - blackjack-network
+
+networks:
+  blackjack-network:
+    driver: bridge

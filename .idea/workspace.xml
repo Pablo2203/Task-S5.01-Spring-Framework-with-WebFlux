@@ -35,6 +35,7 @@
       <change afterPath="$PROJECT_DIR$/../S04T02N01/src/main/java/cat/itacademy/s04/t02/n01/services/FruitService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../S04T02N01/src/main/resources/application-mysql.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../S04T02N01/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tarea S3.02.Patterns.2/src/level1/builder/PizzaBuilder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tarea S3.02.Patterns.2/src/level1/concreteBuilder/HawaiianPizza.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tarea S3.02.Patterns.2/src/level1/concreteBuilder/PepperoniPizza.java" afterDir="false" />
@@ -86,6 +87,8 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
@@ -143,44 +146,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Dockerfile.executor": "Run",
-    "JUnit.GameControllerTest.executor": "Run",
-    "JUnit.GameControllerTest.testCreateGame.executor": "Run",
-    "JUnit.GameServiceTest.executor": "Run",
-    "JUnit.GameServiceTest.playGame_ShouldUpdateGameState_WhenActionIsHit.executor": "Run",
-    "JUnit.PlayerControllerTest.executor": "Run",
-    "JUnit.PlayerControllerTest.testDeletePlayerById.executor": "Run",
-    "JUnit.PlayerControllerTest.testGetRanking.executor": "Run",
-    "JUnit.PlayerControllerTest.testUpdatePlayerById.executor": "Run",
-    "JUnit.PlayerControllerTest.testUpdatePlayerByIdNotFound.executor": "Debug",
-    "JUnit.PlayerServiceTest.executor": "Run",
-    "JUnit.PlayerServiceTest.getRanking_ShouldReturnPlayersSortedByScore.executor": "Run",
-    "JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.DemoApplication.executor": "Run",
-    "Spring Boot.S05T01N01Application.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/test/java/com/example",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameControllerTest.testCreateGame.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameServiceTest.playGame_ShouldUpdateGameState_WhenActionIsHit.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerControllerTest.testDeletePlayerById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerControllerTest.testGetRanking.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerControllerTest.testUpdatePlayerById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerControllerTest.testUpdatePlayerByIdNotFound.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.PlayerServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerServiceTest.getRanking_ShouldReturnPlayersSortedByScore.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerServiceTest.testUpdatePlayerById_whenPlayerExists.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.S05T01N01Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/test/java/com/example&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/pablofedericogomez/IdeaProjects/S05T01N01/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -192,6 +195,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
