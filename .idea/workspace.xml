@@ -85,6 +85,10 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Plane.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
