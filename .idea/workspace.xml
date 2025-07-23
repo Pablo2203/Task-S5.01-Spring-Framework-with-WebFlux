@@ -86,13 +86,11 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/configurationsDB/MongoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/configurationsDB/MongoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/configurationsDB/R2dbcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/configurationsDB/R2dbcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/configurationsDB/MongoConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/configurationsDB/R2dbcConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-mongo.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-mysql.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
