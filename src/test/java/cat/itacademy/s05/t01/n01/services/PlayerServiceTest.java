@@ -1,8 +1,8 @@
 package cat.itacademy.s05.t01.n01.services;
 
 import cat.itacademy.s05.t01.n01.model.Player;
-import cat.itacademy.s05.t01.n01.repositories.GameRepository;
-import cat.itacademy.s05.t01.n01.repositories.PlayerRepository;
+import cat.itacademy.s05.t01.n01.repositories.mongo.GameRepository;
+import cat.itacademy.s05.t01.n01.repositories.r2dbc.PlayerRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

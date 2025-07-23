@@ -5,7 +5,7 @@ import cat.itacademy.s05.t01.n01.model.Game;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import cat.itacademy.s05.t01.n01.repositories.GameRepository;
+import cat.itacademy.s05.t01.n01.repositories.mongo.GameRepository;
 
 import java.util.ArrayList;
 import java.util.Collections;

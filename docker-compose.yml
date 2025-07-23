@@ -11,7 +11,6 @@ services:
       - MYSQL_ADDON_USER=uanrnnjmx5z4brrl
       - MYSQL_ADDON_PORT=3306
       - MYSQL_ADDON_PASSWORD=4yPQ4ThqcOEPAQhQCaUw
-      - SPRING_BOOT_DEBUG=true
 
       # Variables de entorno para MongoDB Atlas
       - MONGO_USER=pablofedericogomez
