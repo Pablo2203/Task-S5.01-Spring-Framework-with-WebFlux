@@ -1,3 +1,4 @@
+/*
 package cat.itacademy.s05.t01.n01.configurationsDB;
 
 import io.r2dbc.spi.ConnectionFactories;
@@ -29,4 +30,4 @@ public class R2dbcConfiguration {
                         .build()
         );
     }
-}
+}*/

@@ -1,3 +1,4 @@
+/*
 package cat.itacademy.s05.t01.n01.configurationsDB;
 
 import com.mongodb.reactivestreams.client.MongoClient;
@@ -15,11 +16,11 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 )
 public class MongoConfiguration {
 
-    @Value("${spring.data.mongodb.database}") // Leemos el nombre de la base de datos de las propiedades
+    @Value("${MONGO_DB}")
     private String databaseName;
 
     @Bean("reactiveMongoTemplate")
     public ReactiveMongoTemplate reactiveMongoTemplate(MongoClient mongoClient) {
         return new ReactiveMongoTemplate(mongoClient, databaseName);
     }
-}
+}*/

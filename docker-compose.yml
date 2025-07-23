@@ -6,17 +6,18 @@ services:
       dockerfile: Dockerfile
     environment:
       - PORT=8081
-      - MYSQL_ADDON_HOST=baxpj38ygnhjn29xafol-mysql.services.clever-cloud.com
-      - MYSQL_ADDON_DB=baxpj38ygnhjn29xafol
-      - MYSQL_ADDON_USER=uanrnnjmx5z4brrl
-      - MYSQL_ADDON_PORT=3306
-      - MYSQL_ADDON_PASSWORD=4yPQ4ThqcOEPAQhQCaUw
+      # - MYSQL_ADDON_HOST=baxpj38ygnhjn29xafol-mysql.services.clever-cloud.com
+      # - MYSQL_ADDON_DB=baxpj38ygnhjn29xafol
+      # - MYSQL_ADDON_USER=uanrnnjmx5z4brrl
+      # - MYSQL_ADDON_PORT=3306
+      # - MYSQL_ADDON_PASSWORD=4yPQ4ThqcOEPAQhQCaUw
 
       # Variables de entorno para MongoDB Atlas
-      - MONGO_USER=pablofedericogomez
-      - MONGO_PASSWORD=Cable321
-      - MONGO_DB=blackjack_db
-
+      # - MONGO_USER=pablofedericogomez
+      # - MONGO_PASSWORD=Cable321
+      # - MONGO_DB=blackjack_db
+    env_file:
+      - .env
     ports:
       - "8081:8081" # Mapea el puerto local 8081 al puerto 8081 del contenedor
     restart: always # Reinicia automáticamente si falla
