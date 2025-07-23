@@ -15,7 +15,7 @@ services:
 
       # Variables de entorno para MongoDB Atlas
       - MONGO_USER=pablofedericogomez
-      - MONGO_PASSWORD=9ZyJjoWuGmaZPvpS
+      - MONGO_PASSWORD=Cable321
       - MONGO_DB=blackjack_db
 
     ports:
