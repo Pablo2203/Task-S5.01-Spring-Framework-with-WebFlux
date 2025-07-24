@@ -86,8 +86,9 @@
       <change afterPath="$PROJECT_DIR$/../TareaS3.01.Patterns.1/src/level3/vehicles/Ship.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../querries.mongo/S02.Mongo.Querries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/S05T01N01Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/itacademy/s05/t01/n01/S05T01N01Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca 01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.04.Testing/src/test/java/org/example/level1/ejercicio1/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasca S1.05. Java Utils/README.md" afterDir="false" />
@@ -203,7 +204,7 @@
       <recent name="cat.itacademy.s05.t01.n01.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameControllerTest">
+  <component name="RunManager" selected="Spring Boot.S05T01N01Application">
     <configuration name="GameControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="S05T01N01" />
       <extension name="coverage">
@@ -214,6 +215,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="cat.itacademy.s05.t01.n01.controllers" />
       <option name="MAIN_CLASS_NAME" value="cat.itacademy.s05.t01.n01.controllers.GameControllerTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -292,6 +294,14 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.GameControllerTest" />
+      <item itemvalue="JUnit.GameServiceTest" />
+      <item itemvalue="JUnit.PlayerControllerTest" />
+      <item itemvalue="JUnit.PlayerServiceTest" />
+      <item itemvalue="JUnit.S05T01N01ApplicationTests" />
+      <item itemvalue="Spring Boot.S05T01N01Application" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameControllerTest" />

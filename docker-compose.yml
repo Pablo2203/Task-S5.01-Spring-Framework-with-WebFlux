@@ -2,7 +2,8 @@ version: '3.8'
 services:
   app:
     build:
-      context: src/main/java
+      context: .
+      #src/main/java
       dockerfile: Dockerfile
     environment:
       - PORT=8081
